@@ -1,0 +1,21 @@
+@mixin clearFix {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+@mixin mQ($arg) {
+    @media screen and (max-width: $arg) {
+        @content;
+    }
+}
+@mixin grid ($max-width, $cols, $rows, $margin) {
+    display: grid;
+    grid-template-columns: repeat($cols, 1fr);
+    grid-template-rows: repeat($rows, 1fr);
+    max-width: $max-width;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+}
