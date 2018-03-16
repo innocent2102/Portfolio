@@ -56,43 +56,88 @@ li:hover {
         padding: 0;
     }
 }
-#about-bg {
-    background: url('./assets/about.jpg');
+#about {
+    margin: auto;
+    max-width: 1200px;
+    margin-bottom: 40px;
+    @include clearFix;
+}
+#about-img {
+    margin-top: 50px;
+    float: left;
+    width: 590px;
+    height: 500px;
+    background: url('./assets/about2.png');
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: 40% 0%;
     filter: blur(5px);
     -webkit-filter: grayscale(100%) contrast(200%);
     filter: grayscale(100%) contrast(200%);
-    opacity: 0.085;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    @include mQ(720px) {
-        background-size: cover;
-    }
+    //opacity: 0.085;
+    opacity: 0.5;
+    //border: 5px solid black;
 }
-#about {
-    max-width: 900px;
-    margin: auto;
+#about-me {
+    margin-top: 30px;
+    float: left;
+    width: 600px;
+}
+// #about-bg {
+//     background: url('./assets/about.jpg');
+//     background-size: 80%;
+//     background-repeat: no-repeat;
+//     background-position: 40% 0%;
+//     filter: blur(5px);
+//     -webkit-filter: grayscale(100%) contrast(200%);
+//     filter: grayscale(100%) contrast(200%);
+//     opacity: 0.085;
+//     z-index: -1;
+//     height: 100%;
+//     width: 100%;
+//     position: absolute;
+//     @include mQ(720px) {
+//         background-size: cover;
+//     }
+// }
+// #about {
+//     float: left;
+//     max-width: 600px;
+//     position: relative;
+//     @include mQ(480px) {
+//         font-size: 15px;
+//     }
+// }
+// #about {
+//     float: left;
+//     max-width: 600px;
+//     position: relative;
+//     @include mQ(480px) {
+//         font-size: 15px;
+//     }
+// }
+#skills {
+    background-image: url('./assets/jeden.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 30px;
+    height: 65vh;
     position: relative;
-    @include mQ(480px) {
-        font-size: 15px;
-    }
 }
 #skill-icons {
-    @include grid(1400px, 4, 2, auto);
+    padding: 50px 0;
+    @include divCentered;
+    background-color: rgba(238, 238, 238, 0.65);
+    @include grid(1200px, 4, 1, auto);
     grid-row-gap: 1.5em;
-    @include mQ(480px) {
-        grid-template-columns: 1fr 1fr;
-    }
+    @include mQ(480px) {}
     img {
-        width: 50%;
+        width: 30%;
     }
 }
 .project {
-    max-width: 1200px;
+    width: 1200px;
     margin: auto;
     border: 1px solid black;
     text-align: center;
@@ -104,10 +149,13 @@ li:hover {
     }
     @include clearFix;
 }
+#contacts {
+    background-image: url('./assets/grey-gradient-bg.jpg');
+}
 #contact {
     max-width: 1200px;
     margin: auto;
-    height: 250px;
+    height: 300px;
 }
 #contact-info {
     float: left;

@@ -14,8 +14,14 @@
     display: grid;
     grid-template-columns: repeat($cols, 1fr);
     grid-template-rows: repeat($rows, 1fr);
-    max-width: $max-width;
+    width: $max-width;
     margin: auto;
     align-items: center;
     justify-items: center;
+}
+@mixin divCentered() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
