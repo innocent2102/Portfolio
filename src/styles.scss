@@ -11,9 +11,23 @@ h1, h2, h3 {
     margin: 0;
     padding: 20px;
 }
+section {
+    width: 100%;
+    position: relative;
+    padding: 50px 0;
+}
+.container {
+    width: 1200px;
+    position: absolute;
+    @include divCentered;
+}
 #cv {
     display: inline-block;
     margin: 18px 45px;
+}
+#{$a-tags} {
+    text-decoration: none;
+    color: $mainColor;
 }
 nav {
     height: 61px;
@@ -30,43 +44,29 @@ nav {
     }
     @include clearFix;
 }
-#{$a-tags} {
-    text-decoration: none;
-    color: $mainColor;
-}
 li:hover {
     transform: scale(1.2);
 }
-#home-bg {
-    position: absolute;
+#home {
+    height: 100vh;
     background: url('./assets/home.jpg');
     background-repeat: no-repeat;
     background-position: 46%;
     background-size: cover;
-    z-index: -1;
     height: 100vh;
     width: 100%;
+    padding: 0;
 }
-#home {
-    height: 100vh;
-}
-#entrance {
+#header-content {
     margin-top: 200px;
     h1, h2 {
         padding: 0;
     }
 }
 #about {
-    margin: 30px auto;
-    max-width: 1200px;
-    @include clearFix;
-}
-#about-bg {
     background-image: url('./assets/sp/7.png');
-    height: 591px;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
+    height: 561px;
+    //@include clearFix;
 }
 #about-img {
     margin-top: 10px;
@@ -77,62 +77,22 @@ li:hover {
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: 40% 0%;
-    filter: blur(5px);
     -webkit-filter: grayscale(100%) contrast(200%);
-    filter: grayscale(100%) contrast(200%);
-    //opacity: 0.085;
     opacity: 0.5;
-    //border: 5px solid black;
 }
-#about-me-desc {
+#about-text {
     float: left;
     width: 600px;
 }
-// #about-bg {
-//     background: url('./assets/about.jpg');
-//     background-size: 80%;
-//     background-repeat: no-repeat;
-//     background-position: 40% 0%;
-//     filter: blur(5px);
-//     -webkit-filter: grayscale(100%) contrast(200%);
-//     filter: grayscale(100%) contrast(200%);
-//     opacity: 0.085;
-//     z-index: -1;
-//     height: 100%;
-//     width: 100%;
-//     position: absolute;
-//     @include mQ(720px) {
-//         background-size: cover;
-//     }
-// }
-// #about {
-//     float: left;
-//     max-width: 600px;
-//     position: relative;
-//     @include mQ(480px) {
-//         font-size: 15px;
-//     }
-// }
-// #about {
-//     float: left;
-//     max-width: 600px;
-//     position: relative;
-//     @include mQ(480px) {
-//         font-size: 15px;
-//     }
-// }
 #skills {
     background-image: url('./assets/jeden.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    padding-bottom: 30px;
-    height: 70vh;
-    position: relative;
+    height: 65vh;
 }
-#skills-bg {
+#skills-content {
     background-color: rgba(238, 238, 238, 0.65);
-    @include divCentered;
 }
 #skill-icons {
     padding-bottom: 77px;
@@ -143,18 +103,51 @@ li:hover {
         width: 30%;
     }
 }
-.project {
-    width: 1200px;
-    margin: auto;
-    border: 1px solid black;
-    text-align: center;
-    overflow: hidden;
-    .project-image {
-        width: 350px;
-        height: 350px;
-        float: left;
+// .project {
+//     width: 1200px;
+//     margin: auto;
+//     border: 1px solid black;
+//     text-align: center;
+//     overflow: hidden;
+//     .project-image {
+//         width: 350px;
+//         height: 350px;
+//         float: left;
+//     }
+//     @include clearFix;
+// }
+#projects {
+    height: 500px;
+    background-image: url('./assets/sp/7.png');
+    padding-top: 30px;
+}
+#project {
+    background-color: white;
+    text-align: left;
+    width: 500px;
+    height: 280px;
+    float: left;
+    margin: 25px;
+    padding: 25px;
+    font-size: 16px;
+    position: relative;
+    img {
+        width: 100%;
+        height: 320px;
     }
-    @include clearFix;
+    h2 {
+        text-align: left;
+        padding: 0;
+    }
+}
+.technologies {
+    color: #ccc;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 10px;
+    position: absolute;
+    display: inline-block;
+    bottom: 0px;
 }
 #contacts {
     background-image: url('./assets/grey-gradient-bg.jpg');

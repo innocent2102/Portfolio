@@ -1,6 +1,5 @@
-<div id="home-bg"></div>
 <section id="home">
-    <header>
+    <header id="particles-js">
         <nav class="animated fadeInLeft">
             <span id="cv">CURRICULUM VITAE</span>
             <ul>
@@ -11,30 +10,32 @@
                 <li><a href="#contacts">CONTACT</a></li>
             </ul>
         </nav>
-        <div id="entrance" class="animated fadeInDownBig">
+        <div id="header-content" class="animated fadeInDownBig">
             <h1>Michał Gorlewski</h1>
             <h2>Junior Front End Developer</h2>
         </div>
     </header>
 </section>
-<div id="about-bg"></div>
+<!-- <div id="about-bg"></div> -->
 <section id="about">
-    <div id="about-img"></div>
-    <div id="about-me-desc">
-        <h2>ABOUT ME</h2>
-        <p>
-            I've been working for most of the time as a quality specialist, but finally decided to deal with something more fascinating. The story with programming began three years ago when I started IT studies. <br> <br> At the time I was learning many
-            programming languages (C++, C#, JavaScript, PHP, Assembler), but JavaScript was most attractive for me, so I made my mind up to study it on my own.
-        </p>
-        <p>
-            So far, I've been learning new technologies by building new projects, which is in my opinion best way to master skills (reading documentation, watching video tutorials are important too). I also try to resolve other people problems, thus I can look at
-            the code from different perspective. <br> <br> In my my last project I used Web API, Node.js and MySQL technologies. Projecting relations in database, creating Web API satisfied me a lot, thus I hope to be working on this in the
-            future.
-        </p>
+    <div class="container">
+        <div id="about-img"></div>
+        <div id="about-text">
+            <h2>ABOUT ME</h2>
+            <p>
+                I've been working for most of the time as a quality specialist, but finally decided to deal with something more fascinating. The story with programming began three years ago when I started IT studies. <br> <br> At the time I was learning
+                many programming languages (C++, C#, JavaScript, PHP, Assembler), but JavaScript was most attractive for me, so I made my mind up to study it on my own.
+            </p>
+            <p>
+                So far, I've been learning new technologies by building new projects, which is in my opinion best way to master skills (reading documentation, watching video tutorials are important too). I also try to resolve other people problems, thus I can look at
+                the code from different perspective. <br> <br> In my my last project I used Web API, Node.js and MySQL technologies. Projecting relations in database, creating Web API satisfied me a lot, thus I hope to be working on this
+                in the future.
+            </p>
+        </div>
     </div>
 </section>
 <section id="skills">
-    <div id="skills-bg">
+    <div id="skills-content" class="container">
         <h2>SKILLS</h2>
         <div id="skill-icons">
             <img src="../assets/typescript.png" alt="typescript">
@@ -49,7 +50,7 @@
     </div>
 </section>
 <!-- <div style="clear: both"></div> -->
-<section id="projects">
+<!-- <section id="projects">
     <h2>PROJECTS</h2>
     <div class="project">
         <img class="project-image" src="../assets/share-costs.png" alt="">
@@ -67,6 +68,26 @@
             <p>Adding customers, products and orders. </p>
             <p><i>Tools:</i> AngularJS, Material Design, CSS, HTML</p>
         </div>
+    </div>
+</section> -->
+<section id="projects">
+    <h2>PROJECTS</h2>
+    <div class="container">
+        <div id="project">
+            <!-- <img src="../assets/pfo.png" alt=""> -->
+            <h2>Share Costs</h2>
+            <p>Web page let's you manage common bills among friends. Everyone can add, track or pay off debts and owes. Debts are counted automatically depending on bill, so you don't need to worry about it. Share Costs also remembers all your bill details
+                for you. Data is saved on the server via Web API</p>
+            <p class="technologies">ANGULAR / TYPESCRIPT / MYSQL / API / PHP / NODE.JS / BOOTSTRAP / CSS</p>
+        </div>
+
+        <div id="project">
+            <!-- <img src="../assets/cm.png" alt=""> -->
+            <h2>Customer Manager</h2>
+            <p>Adding customers, products and orders.</p>
+            <p class="technologies">ANGULAR.JS / MATERIAL DESIGN / CSS / HTML</p>
+        </div>
+
     </div>
 </section>
 <section id="contacts">
