@@ -1,5 +1,5 @@
 <section id="home">
-    <header id="particles-js">
+    <header>
         <nav class="animated fadeInLeft">
             <span id="cv">CURRICULUM VITAE</span>
             <ul>
@@ -7,7 +7,7 @@
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#skills">SKILLS</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="#contacts">CONTACT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
         <div id="header-content" class="animated fadeInDownBig">
@@ -19,8 +19,10 @@
 
 <section id="about">
     <div class="container">
-        <div id="about-img"></div>
-        <div id="about-text">
+        <div id="about-img">
+
+        </div>
+        <div id="about-text" class="typewriter">
             <h2>ABOUT ME</h2>
             <p>
                 I've been working for most of the time as a quality specialist, but finally decided to deal with something more fascinating. The story with programming began three years ago when I started IT studies. <br> <br> At the time I was learning
@@ -39,14 +41,38 @@
     <div id="skills-content" class="container">
         <h2>SKILLS</h2>
         <div id="skill-icons">
-            <img src="../assets/typescript.png" alt="typescript">
-            <img src="../assets/js.png" alt="javascript">
-            <img src="../assets/html.png" alt="html">
-            <img src="../assets/css.png" alt="css">
-            <img src="../assets/angular.png" alt="angular">
-            <img src="../assets/bootstrap.png" alt="bootstrap">
-            <img src="../assets/git.png" alt="git">
-            <img src="../assets/npm.png" alt="npm">
+            <div>
+                <img src="../assets/typescript.png" alt="typescript">
+                <span class="test">TypeScript</span>
+            </div>
+            <div>
+                <img src="../assets/js.png" alt="javascript">
+                <span class="test">JavaScript</span>
+            </div>
+            <div>
+                <img src="../assets/html.png" alt="html">
+                <span class="test">HTML</span>
+            </div>
+            <div>
+                <img src="../assets/css.png" alt="css">
+                <span class="test">CSS</span>
+            </div>
+            <div>
+                <img src="../assets/angular.png" alt="angular">
+                <span class="test">Angular</span>
+            </div>
+            <div>
+                <img src="../assets/bootstrap.png" alt="bootstrap">
+                <span class="test">Bootstrap</span>
+            </div>
+            <div>
+                <img src="../assets/git.png" alt="git">
+                <span class="test">Git</span>
+            </div>
+            <div>
+                <img src="../assets/npm.png" alt="npm">
+                <span class="test">npm</span>
+            </div>
         </div>
     </div>
 </section>
@@ -68,7 +94,6 @@
                 </div>
             </div>
         </a>
-
         <a class="project" href="https://github.com/innocent2102/Customer-Manager" target="_blank">
             <div class="project-img">
                 <img src="../assets/2pp.jpg" alt="">
@@ -82,37 +107,25 @@
                 </div>
             </div>
         </a>
-
     </div>
 </section>
-<section id="contacts">
-    <h2>STAY IN TOUCH</h2>
-    <div id="contact">
+
+<section id="contact">
+    <div class="container">
+        <!-- <h2>GET IN TOUCH</h2>
+    <div class="container">
         <div id="contact-info">
             <h3>Contact info</h3>
-            <!-- <li><i class="fas fa-phone"></i><span>+48 507 055 415</span></li>
-            <li><i class="fab fa-linkedin"></i><span>linkedin.com/in/michal-gorlewski</span></li>
-            <li><i class="far fa-envelope"></i><span>gorlewski.michal@gmail.com</span></li> -->
-            <div style="height: 50px">
-                <div class="test">
-                    <i style="line-height: 20px" class="fas fa-phone"></i>
-                </div>
-                <div class="test">
-                    <span>Phone number:</span><br>
-                    <span>+48 507 055 415</span><br><br>
-                </div>
+            <div class="contact-container">
+                <span class="icon-info"><i class="fas fa-phone"></i></span>
+                <span class="title-info"><b>Phone:</b></span>
+                <span class="description-info">+48 507 055 415</span>
             </div>
-            <div style="clear: both">
-                <div class="test">
-                    <i class="far fa-envelope"></i>
-                </div>
-                <div class="test">
-                    <span>E-mail</span><br>
-                    <span>gorlewski.michal@gmail.com</span><br>
-                </div>
-
+            <div class="contact-container">
+                <span class="icon-info"><i class="fas fa-envelope"></i></span>
+                <span class="title-info"><b>Email:</b></span>
+                <span class="description-info">gorlewski.michal@gmail.com</span>
             </div>
-
         </div>
         <div id="contact-form">
             <form action="https://formspree.io/michal2102@gmail.com" method="post">
@@ -126,6 +139,39 @@
                 </div>
             </form>
         </div>
+    </div> -->
+        <div id="contact-header">
+            <h2>CONTACT</h2>
+        </div>
 
+        <div id="contact-form">
+            <h3>Send message</h3>
+            <input type="text" id="name" name="name" placeholder="Name">
+            <input type="email" id="email" name="_replyto" placeholder="Email">
+            <textarea wrap="soft" name="message" id="message" placeholder="Message" rows="5"></textarea>
+            <input type="submit" name="" id="submit-btn">
+        </div>
+
+        <div id="contact-info">
+            <div id="contact-info-bg"></div>
+            <div id="contact-info-content">
+                <div class="contact-container">
+                    <span class="icon-info"><i class="fas fa-phone"></i></span>
+                    <span class="title-info"><b>Phone:</b></span>
+                    <span class="description-info">+48 507 055 415</span>
+                </div>
+                <div class="contact-container">
+                    <span class="icon-info"><i class="fas fa-envelope"></i></span>
+                    <span class="title-info"><b>Email:</b></span>
+                    <span class="description-info">gorlewski.michal@gmail.com</span>
+                </div>
+                <div class="contact-container">
+                    <a href="https://www.linkedin.com/in/michal-gorlewski/" class="media"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="https://github.com/innocent2102" class="media"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100001873605193" class="media"><i class="fab fa-facebook fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
+
 </section>
