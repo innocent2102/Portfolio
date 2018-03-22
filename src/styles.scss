@@ -1,6 +1,7 @@
 @import 'assets/scss/mixins';
 @import 'assets/scss/variables';
 @import 'assets/scss/_normalize.scss';
+@import 'assets/scss/mobile-menu.scss';
 * {
     box-sizing: border-box;
 }
@@ -26,7 +27,8 @@ section {
     margin: auto;
 }
 #cv {
-    display: inline-block;
+    display: block;
+    float: left;
     margin: 18px 45px;
     @include mQ(960px) {
         display: none;
@@ -36,15 +38,33 @@ section {
     text-decoration: none;
     color: inherit;
 }
-#nav-mobile {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: none;
-    @include mQ(600px) {
-        display: block;
-    }
-}
+// nav {
+//     height: 61px;
+//     border: 1px solid rgb(236, 236, 236);
+//     letter-spacing: 1.5px;
+//     ul {
+//         margin-right: 45px;
+//         float: right;
+//         @include mQ(960px) {
+//             width: 600px;
+//             float: none;
+//             padding: 0;
+//             margin: 18px auto;
+//         }
+//     }
+//     li {
+//         display: inline-block;
+//         margin-left: 30px;
+//         transition: .3s;
+//         &:hover {
+//             transform: scale(1.2);
+//         }
+//     }
+//     @include mQ(600px) {
+//         display: none;
+//     }
+//     @include clearFix;
+// }
 nav {
     height: 61px;
     border: 1px solid rgb(236, 236, 236);
@@ -67,13 +87,12 @@ nav {
             transform: scale(1.2);
         }
     }
-    @include mQ(600px) {
-        display: none;
-    }
     @include clearFix;
 }
+#nav {
+    display: none;
+}
 #home {
-    height: 100vh;
     background: url('assets/img/home.jpg');
     background-repeat: no-repeat;
     background-position: 46%;
@@ -83,7 +102,7 @@ nav {
     padding: 0;
 }
 #header-content {
-    padding-top: 200px;
+    padding: 200px 10px;
     h1, h2 {
         padding: 0;
     }
@@ -114,12 +133,17 @@ nav {
         opacity: 0.1;
         //z-index: -1;
     }
+    @include mQ(500px) {
+        background-position: -35%;
+    }
 }
 #about-text {
     float: left;
     max-width: 600px;
     padding: 0 20px;
-    @include mQ(900px) {}
+    @include mQ(500px) {
+        font-size: 14px;
+    }
 }
 #skills {
     background-image: url('assets/img/skills.jpg');
@@ -132,10 +156,10 @@ nav {
 #skills-content {
     background-color: rgba(238, 238, 238, 0.65);
     @include div-centered;
-    height: 470px;
+    //height: 80%;
 }
 #skill-icons {
-    padding-bottom: 77px;
+    padding-bottom: 20px;
     @include grid(1200px, 4, 1, auto);
     grid-row-gap: 3em;
     div {
@@ -149,6 +173,16 @@ nav {
             }
         }
     }
+    @include mQ(1200px) {
+        @include grid(900px, 4, 1, auto);
+    }
+    @include mQ(900px) {
+        @include grid(600px, 4, 1, auto);
+    }
+    @include mQ(600px) {
+        grid-row-gap: 0;
+        @include grid(300px, 2, 4, auto);
+    }
     span {
         opacity: 0;
         transition: .5s;
@@ -161,9 +195,14 @@ nav {
     }
 }
 #projects {
-    height: 900px;
     background-image: $section-bg;
     padding-top: 15px;
+    @include mQ(1220px) {
+        .container {
+            width: 580px;
+        }
+    }
+    @include clearFix;
 }
 .project {
     -webkit-box-shadow: 10px 10px 24px -8px rgba(0, 0, 0, 0.52);
@@ -171,6 +210,7 @@ nav {
     width: 560px;
     height: 700px;
     margin: 20px;
+    //margin: auto;
     float: left;
     position: relative;
     h2 {
@@ -190,6 +230,12 @@ nav {
     &:hover {
         img {
             transform: scale(1.2);
+        }
+    }
+    @include mQ(660px) {
+        height: auto;
+        .project-description {
+            padding-bottom: 75px;
         }
     }
 }
@@ -323,44 +369,3 @@ nav {
     padding: 0;
     font-size: 14px;
 }
-// .nav-container ul li:not(:first-child) {
-//     margin-left: 0;
-// }
-// .nav-container ul li a {
-//     padding: 10px 25px;
-//     opacity: 0;
-//     color: #fff;
-//     font-size: 24px;
-//     font-weight: 600;
-//     transform: translateY(-20px);
-//     transition: all 0.2s ease;
-// }
-// .nav-open {
-//     position: fixed;
-//     right: 10px;
-//     top: 10px;
-//     display: block;
-//     width: 48px;
-//     height: 48px;
-//     cursor: pointer;
-//     z-index: 9999;
-//     border-radius: 50%;
-// }
-// .nav-open i {
-//     display: block;
-//     width: 20px;
-//     height: 2px;
-//     background: #1f2227;
-//     border-radius: 2px;
-//     margin-left: 14px;
-// }
-// .nav-open i:nth-child(1) {
-//     margin-top: 16px;
-// }
-// .nav-open i:nth-child(2) {
-//     margin-top: 4px;
-//     opacity: 1;
-// }
-// .nav-open i:nth-child(3) {
-//     margin-top: 4px;
-// }
