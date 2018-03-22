@@ -145,27 +145,29 @@
         </div>
 
         <div id="contact-form">
-            <h3>Send message</h3>
-            <input type="text" id="name" name="name" placeholder="Name">
-            <input type="email" id="email" name="_replyto" placeholder="Email">
-            <textarea wrap="soft" name="message" id="message" placeholder="Message" rows="5"></textarea>
-            <input type="submit" name="" id="submit-btn">
+            <form action="https://formspree.io/michal2102@gmail.com" method="post">
+                <h3>Send message</h3>
+                <input type="text" id="name" name="name" placeholder="Name">
+                <input type="email" id="email" name="_replyto" placeholder="Email">
+                <textarea wrap="soft" name="message" id="message" placeholder="Message" rows="5"></textarea>
+                <input type="submit" name="" id="submit-btn" value="SUBMIT">
+                <hr>
+            </form>
         </div>
 
         <div id="contact-info">
-            <div id="contact-info-bg"></div>
             <div id="contact-info-content">
                 <div class="contact-container">
                     <span class="icon-info"><i class="fas fa-phone"></i></span>
                     <span class="title-info"><b>Phone:</b></span>
-                    <span class="description-info">+48 507 055 415</span>
+                    <span class="description-info"><a href="tel:+48507055415">+48 507 055 415</a></span>
                 </div>
                 <div class="contact-container">
                     <span class="icon-info"><i class="fas fa-envelope"></i></span>
                     <span class="title-info"><b>Email:</b></span>
-                    <span class="description-info">gorlewski.michal@gmail.com</span>
+                    <span class="description-info"><a href="mailto:gorlewski.michal@gmail.com">gorlewski.michal@gmail.com</a></span>
                 </div>
-                <div class="contact-container">
+                <div class="contact-container test">
                     <a href="https://www.linkedin.com/in/michal-gorlewski/" class="media"><i class="fab fa-linkedin fa-2x"></i></a>
                     <a href="https://github.com/innocent2102" class="media"><i class="fab fa-github fa-2x"></i></a>
                     <a href="https://www.facebook.com/profile.php?id=100001873605193" class="media"><i class="fab fa-facebook fa-2x"></i></a>
@@ -174,4 +176,8 @@
         </div>
     </div>
 
+
+</section>
+<section id="footer">
+    <span>&copy; Michał Gorlewski 2018</span>
 </section>
