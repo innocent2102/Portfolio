@@ -1,12 +1,16 @@
-@import './assets/scss/mixins';
-@import './assets/scss/variables';
-$section-bg: url('assets/sp/5.png');
+@import 'assets/scss/mixins';
+@import 'assets/scss/variables';
+@import 'assets/scss/_normalize.scss';
+* {
+    box-sizing: border-box;
+}
 body {
     color: $mainColor;
     font-size: $mainFontSize;
     font-family: Open Sans, sans-serif;
     line-height: 1.4;
     background-color: rgb(230, 230, 230);
+    margin: 0;
 }
 h1, h2, h3 {
     text-align: center;
@@ -18,16 +22,28 @@ section {
     padding: 50px 0;
 }
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
 }
 #cv {
     display: inline-block;
     margin: 18px 45px;
+    @include mQ(960px) {
+        display: none;
+    }
 }
 #{$a-tags} {
     text-decoration: none;
     color: inherit;
+}
+#nav-mobile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    @include mQ(600px) {
+        display: block;
+    }
 }
 nav {
     height: 61px;
@@ -36,6 +52,12 @@ nav {
     ul {
         margin-right: 45px;
         float: right;
+        @include mQ(960px) {
+            width: 600px;
+            float: none;
+            padding: 0;
+            margin: 18px auto;
+        }
     }
     li {
         display: inline-block;
@@ -45,11 +67,14 @@ nav {
             transform: scale(1.2);
         }
     }
+    @include mQ(600px) {
+        display: none;
+    }
     @include clearFix;
 }
 #home {
     height: 100vh;
-    background: url('./assets/home.jpg');
+    background: url('assets/img/home.jpg');
     background-repeat: no-repeat;
     background-position: 46%;
     background-size: cover;
@@ -58,33 +83,46 @@ nav {
     padding: 0;
 }
 #header-content {
-    margin-top: 200px;
+    padding-top: 200px;
     h1, h2 {
         padding: 0;
     }
 }
 #about {
     background-image: $section-bg;
-    height: 530px;
+    @include mQ(1200px) {
+        .container {
+            max-width: 600px;
+        }
+    }
+    @include clearFix;
 }
 #about-img {
     margin-top: 10px;
     float: left;
     width: 590px;
     height: 500px;
-    background: url('./assets/about2.png');
+    background: url('assets/img/hero.png');
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: 40% 0%;
     -webkit-filter: grayscale(100%) contrast(200%);
     opacity: 0.5;
+    @include mQ(1200px) {
+        //display: none;
+        position: absolute;
+        opacity: 0.1;
+        //z-index: -1;
+    }
 }
 #about-text {
     float: left;
-    width: 600px;
+    max-width: 600px;
+    padding: 0 20px;
+    @include mQ(900px) {}
 }
 #skills {
-    background-image: url('./assets/jeden.jpg');
+    background-image: url('assets/img/skills.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -93,7 +131,7 @@ nav {
 }
 #skills-content {
     background-color: rgba(238, 238, 238, 0.65);
-    @include divCentered;
+    @include div-centered;
     height: 470px;
 }
 #skill-icons {
@@ -123,7 +161,7 @@ nav {
     }
 }
 #projects {
-    height: 850px;
+    height: 900px;
     background-image: $section-bg;
     padding-top: 15px;
 }
@@ -244,7 +282,6 @@ nav {
     }
 }
 #contact-info {
-    box-sizing: border-box;
     position: absolute;
     background-color: rgb(100, 185, 255);
     height: 350px;
@@ -277,7 +314,6 @@ nav {
     }
     &:nth-child(3) {
         margin-top: 50px;
-        //transform: rotate(-90deg)
     }
 }
 #footer {
@@ -287,3 +323,44 @@ nav {
     padding: 0;
     font-size: 14px;
 }
+// .nav-container ul li:not(:first-child) {
+//     margin-left: 0;
+// }
+// .nav-container ul li a {
+//     padding: 10px 25px;
+//     opacity: 0;
+//     color: #fff;
+//     font-size: 24px;
+//     font-weight: 600;
+//     transform: translateY(-20px);
+//     transition: all 0.2s ease;
+// }
+// .nav-open {
+//     position: fixed;
+//     right: 10px;
+//     top: 10px;
+//     display: block;
+//     width: 48px;
+//     height: 48px;
+//     cursor: pointer;
+//     z-index: 9999;
+//     border-radius: 50%;
+// }
+// .nav-open i {
+//     display: block;
+//     width: 20px;
+//     height: 2px;
+//     background: #1f2227;
+//     border-radius: 2px;
+//     margin-left: 14px;
+// }
+// .nav-open i:nth-child(1) {
+//     margin-top: 16px;
+// }
+// .nav-open i:nth-child(2) {
+//     margin-top: 4px;
+//     opacity: 1;
+// }
+// .nav-open i:nth-child(3) {
+//     margin-top: 4px;
+// }
