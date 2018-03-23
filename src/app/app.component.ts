@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-}
+
+  @ViewChild('menuBtn') menuBtn;
+
+    closeMobileMenu() {
+        this.menuBtn.nativeElement.checked = false;
+      }
+ }
+
 

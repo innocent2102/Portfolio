@@ -1,21 +1,11 @@
 <section id="home">
     <header>
-        <!-- <nav class="animated fadeInLeft">
-            <span id="cv">CURRICULUM VITAE</span>
-            <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#skills">SKILLS</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </nav> -->
         <nav>
             <span id="cv">CURRICULUM VITAE</span>
-            <input type="checkbox" id="nav" />
+            <input type="checkbox" #menuBtn id="nav" />
             <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
             <div class="nav-container">
-                <ul>
+                <ul (click)="closeMobileMenu()">
                     <li><a href="#home">HOME</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#skills">SKILLS</a></li>
