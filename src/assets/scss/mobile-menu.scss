@@ -1,28 +1,9 @@
 @include mQ(600px) {
-    // nav {
-    //     padding: 30px;
-    //     position: absolute;
-    // }
-    // nav ul {
-    //     float: right;
-    // }
-    // nav ul li {
-    //     display: inline-block;
-    //     float: left;
-    // }
-    // nav ul li:not(:first-child) {
-    //     margin-left: 25px;
-    // }
     nav ul li a {
         display: inline-block;
-        //outline: none;
-        //color: #1f2227;
-        //font-size: 16px;
-        //text-decoration: none;
     }
     nav ul li a:hover {
         color: #808080;
-        //text-decoration: none;
     }
     #nav:checked+.nav-open {
         transform: rotate(45deg);
@@ -34,9 +15,6 @@
     #nav:checked+.nav-open i:nth-child(1) {
         transform: translateY(6px) rotate(180deg);
     }
-    // #nav:checked+.nav-open i:nth-child(2) {
-    //     opacity: 0;
-    // }
     #nav:checked+.nav-open i:nth-child(3) {
         transform: translateY(-6px) rotate(90deg);
     }
@@ -65,19 +43,13 @@
         transform: translateY(-50%);
         width: 100%;
         text-align: center;
-        //padding: 0;
     }
     .nav-container ul li {
         display: block;
-        //float: none;
         margin: 0 0 15px 0;
     }
-    // .nav-container ul li:not(:first-child) {
-    //     margin-left: 0;
-    // }
     .nav-container ul li a {
         padding: 10px 25px;
-        //opacity: 0;
         color: #fff;
         font-size: 24px;
         font-weight: 600;
@@ -100,7 +72,6 @@
         width: 20px;
         height: 2px;
         background: #1f2227;
-        //border-radius: 2px;
         margin-left: 14px;
     }
     .nav-open i:nth-child(1) {

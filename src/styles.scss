@@ -1,7 +1,8 @@
 @import 'assets/scss/mixins';
 @import 'assets/scss/variables';
-@import 'assets/scss/_normalize.scss';
-@import 'assets/scss/mobile-menu.scss';
+@import 'assets/scss/_normalize';
+@import 'assets/scss/mobile-menu';
+@import 'assets/scss/animate';
 * {
     box-sizing: border-box;
 }
@@ -144,16 +145,12 @@ nav {
         width: 40%;
         margin: auto;
         display: block;
-        transition: .5s;
     }
     div {
         text-align: center;
         &:hover {
             span {
                 opacity: 1;
-            }
-            img {
-                transform: rotateY(180deg);
             }
         }
     }
