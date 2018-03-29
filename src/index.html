@@ -4,14 +4,191 @@
 <head>
     <meta charset="utf-8">
     <title>Portfolio</title>
-    <base href="./">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="assets/css/fontawesome-all.min.css">
+    <!-- build:css -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- endbuild -->
 </head>
 
 <body>
-    <app-root></app-root>
+    <section id="home">
+        <header>
+            <nav>
+                <span id="cv">PORTFOLIO</span>
+                <input type="checkbox" #menuBtn id="nav" />
+                <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+                <div class="nav-container">
+                    <ul id="navbar">
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#skills">SKILLS</a></li>
+                        <li><a href="#projects">PROJECTS</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="header-content" class="animated fadeInDownBig">
+                <h1>Michał Gorlewski</h1>
+                <h2>Junior Front End Developer</h2>
+            </div>
+        </header>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div id="about-img"></div>
+            <div id="about-text">
+                <h2>ABOUT ME</h2>
+                <p>
+                    I've been working for most of the time as a quality specialist, but finally decided to deal with something more fascinating. The story with programming began three years ago when I started IT studies. <br> <br> At the time I was learning
+                    many programming languages (C++, C#, JavaScript, PHP, Assembler), but JavaScript was most attractive for me, so I made my mind up to study it on my own.
+                </p>
+                <p>
+                    So far, I've been learning new technologies by building new projects, which is in my opinion best way to master skills (reading documentation, watching video tutorials are important too). I also try to resolve other people problems, thus I can look at
+                    the code from different perspective. <br> <br> In my last project I used Web API, Node.js and MySQL technologies. Projecting relations in database, creating Web API satisfied me a lot, thus I hope to be working
+                    on this in the future.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div id="skills-content" class="container">
+            <h2>SKILLS</h2>
+            <div id="skill-icons">
+                <div>
+                    <img src="svg/typescript.svg" alt="typescript">
+                    <span>TypeScript</span>
+                </div>
+                <div>
+                    <img src="svg/javascript.svg" alt="javascript">
+                    <span>JavaScript</span>
+                </div>
+                <div>
+                    <img src="svg/html.svg" alt="html">
+                    <span>HTML</span>
+                </div>
+                <div>
+                    <img src="svg/css.svg" alt="css">
+                    <span>CSS</span>
+                </div>
+                <div>
+                    <img src="svg/angular.svg" alt="angular">
+                    <span>Angular</span>
+                </div>
+                <div>
+                    <img src="svg/bootstrap.svg" alt="bootstrap">
+                    <span>Bootstrap</span>
+                </div>
+                <div>
+                    <img src="svg/git.svg" alt="git">
+                    <span>Git</span>
+                </div>
+                <div>
+                    <img src="svg/npm.svg" alt="npm">
+                    <span>npm</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>PROJECTS</h2>
+        <div class="container">
+            <div class="project">
+                <div class="project-img">
+                    <img src="img/share-costs.jpg" alt="share costs">
+                </div>
+                <div class="project-description">
+                    <p class="technologies">ANGULAR | TYPESCRIPT | MYSQL | API | PHP | NODE.JS | BOOTSTRAP | CSS</p>
+                    <h2>Share Costs</h2>
+                    <p>Website let's you manage common bills among friends. Everyone can add, track or pay off debts and owes. Debts are counted automatically depending on bill, so you don't need to worry about it. Share Costs also remembers all your bill
+                        details for you. Data is stored in a database (MySQL) and retrieving via Web API.</p>
+                    <div class="project-links">
+                        <a href="http://www.gorlewskim.pl/share-costs" target="_blank">Live</a>
+                        <a href="https://github.com/innocent2102/Share-Costs" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-img">
+                    <img src="img/customer-manager.jpg" alt="customer manager">
+                </div>
+                <div class="project-description">
+                    <p class="technologies">ANGULAR.JS | MATERIAL DESIGN | CSS | HTML</p>
+                    <h2>Customer Manager</h2>
+                    <p>Managing customers and their orders. View orders tab will list all your order details. You can filter all of them in search input and sort by product name, quantity, unit or total price. </p>
+                    <div class="project-links">
+                        <a href="https://github.com/innocent2102/Customer-Manager" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div id="contact-header">
+                <h2>CONTACT</h2>
+            </div>
+            <div id="contact-form">
+                <form action="https://formspree.io/michal2102@gmail.com" method="post">
+                    <h3>Send message</h3>
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                    <input type="email" id="email" name="_replyto" placeholder="Email" required>
+                    <textarea wrap="soft" name="message" id="message" placeholder="Message" rows="5" required></textarea>
+                    <input type="submit" name="input" id="submit-btn" value="SUBMIT">
+                    <hr>
+                </form>
+            </div>
+            <div id="contact-info">
+                <div id="contact-info-content">
+                    <div class="contact-container">
+                        <span class="icon-info"><i class="fas fa-phone"></i></span>
+                        <span class="title-info"><b>Phone:</b></span>
+                        <span class="description-info"><a href="tel:+48507055415">+48 507 055 415</a></span>
+                    </div>
+                    <div class="contact-container">
+                        <span class="icon-info"><i class="fas fa-envelope"></i></span>
+                        <span class="title-info"><b>Email:</b></span>
+                        <span class="description-info"><a href="mailto:gorlewski.michal@gmail.com">gorlewski.michal@gmail.com</a></span>
+                    </div>
+                    <div class="contact-container">
+                        <a href="https://www.linkedin.com/in/michal-gorlewski/" class="media"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="https://github.com/innocent2102" class="media"><i class="fab fa-github fa-2x"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100001873605193" class="media"><i class="fab fa-facebook fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <span>&copy; Michał Gorlewski 2018</span>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('#navbar').on('click', function() {
+                $('#nav').prop('checked', false);
+            })
+
+            $('a[href^="#"]').on('click', function(event) {
+                const target = $($(this).attr('href'));
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                }
+            });
+
+        });
+    </script>
+
 </body>
 
 </html>
